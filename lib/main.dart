@@ -1,8 +1,8 @@
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  return runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('ListView中的图片Image'),
+          title: Text('官网测试列子'),
         ),
         body: HomeContent(),
       ),
@@ -21,42 +21,9 @@ class MyApp extends StatelessWidget {
 class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.all(10),
-      children: <Widget>[
-        Image.network(
-            "https://img2.baidu.com/it/u=732777871,2613945566&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=889"),
-        Container(
-            child: Text(
-              '我是标题',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24),
-            ),
-            height: 60,
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 0)),
-        Image.network(
-            "https://img2.baidu.com/it/u=732777871,2613945566&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=889"),
-        Container(
-            child: Text(
-              '我是标题',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24),
-            ),
-            height: 60,
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 0)),
-        Image.network(
-            "https://img2.baidu.com/it/u=732777871,2613945566&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=889"),
-        Container(
-            child: Text(
-              '我是标题',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24),
-            ),
-            height: 60,
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 0)),
-        Image.network(
-            "https://img2.baidu.com/it/u=732777871,2613945566&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=889"),
-      ],
+    final wordPair = new WordPair.random();
+    return Center(
+      child: new Text(wordPair.asPascalCase),
     );
   }
 }
