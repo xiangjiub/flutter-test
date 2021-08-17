@@ -33,10 +33,15 @@ class _TabsState extends State<Tabs> {
             this._curindex = index;
           });
         },
+        iconSize: 20.0,
+        fixedColor: Colors.deepOrange,
+        type: BottomNavigationBarType.fixed,  //可是设置多个按钮
         items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首页')),
         BottomNavigationBarItem(icon: Icon(Icons.category), title: Text('分类')),
         BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text('设置')),
+        // BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text('设置')),
+
       ]),
     );
   }
